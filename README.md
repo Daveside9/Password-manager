@@ -1,95 +1,98 @@
-Password Manager
+🔐 Password Manager
+A simple yet secure command-line password manager that helps users store and manage multiple credentials behind a single master password.
 
-A simple command-line-based password manager that encrypts and stores credentials securely using the cryptography library.
+✨ Features
+Master Password Protection – Access to your credentials is locked with a master password known only to you.
 
-Features
+Fernet Encryption – All data is encrypted using secure cryptographic methods.
 
-Master Password: Secure access using a master password.
+Credential Management – Easily save and retrieve encrypted login credentials.
 
-Encryption: Uses Fernet encryption to store credentials safely.
+Simple CLI Interface – Minimal and intuitive command-line interface.
 
-Credential Storage: Saves encrypted credentials in a text file.
+Offline Storage – Everything is stored locally and securely in text files.
 
-Credential Retrieval: Allows viewing of stored credentials after authentication.
-
-Simple CLI Interface: Easy-to-use command-line interface for managing passwords.
-
-Installation
-
+🛠️ Installation
 Prerequisites
-
-Python 3.6 or later
+Python 3.6 or higher
 
 Clone the Repository
-
-git clone https://github.com/yourusername/password-manager.git
+bash
+Copy
+Edit
+git clone https://github.com/Daveside9/password-manager.git
 cd password-manager
-
 Install Dependencies
-
+bash
+Copy
+Edit
 pip install -r requirements.txt
-
-Usage
-
-1. Generate an Encryption Key (Run Once)
-
+🚀 Usage
+1. Generate an Encryption Key & Set Master Password (Run Once)
+bash
+Copy
+Edit
 python manager.py
+Choose option 1 to set your master password.
 
-Select option 1 to set the master password (this also generates an encryption key).
+This will also generate the encryption key (key.key) automatically.
 
-2. Running the Password Manager
-
+2. Run the Password Manager
+bash
+Copy
+Edit
 python manager.py
+Choose from the following menu options:
 
-Select the appropriate options from the menu:
+1 – Set Master Password (only once if not yet set)
 
-Set Master Password (Run once if not already set)
+2 – Login with your master password
 
-Login
+3 – Save a new credential (e.g., Gmail, Facebook, etc.)
 
-Save Credential
+4 – View saved credentials
 
-View Credentials
+5 – Exit
 
-Exit
-
-File Structure
-
+📁 File Structure
+pgsql
+Copy
+Edit
 password-manager/
-│── manager.py          # Main script with encryption and credential management
-│── key.key             # Encryption key file (Generated automatically)
-│── master_password.txt # Encrypted master password
-│── credentials.txt     # Encrypted stored credentials
-│── requirements.txt    # Required dependencies
+│
+├── manager.py              # Main script to run the app
+├── key.key                 # Encryption key (auto-generated)
+├── master_password.txt     # Encrypted master password
+├── credentials.txt         # Encrypted credentials storage
+└── requirements.txt        # Project dependencies
+🔒 Security Notes
+Never share your key.key file – it's critical for decrypting your data.
 
-Security Notes
+The master password and all saved credentials are encrypted.
 
-The master password is encrypted and stored in master_password.txt.
+Keep your project directory secure and backed up if needed.
 
-Credentials are encrypted before being saved in credentials.txt.
-
-Never share your key.key file, as it is required for decryption.
-
-Dependencies
-
-The project requires the following Python packages:
+📦 Dependencies
+This project uses the following Python packages:
 
 bcrypt==4.2.1
+
 cffi==1.17.1
+
 cryptography==44.0.0
+
 pycparser==2.22
 
-Install them using:
+Install them with:
 
+bash
+Copy
+Edit
 pip install -r requirements.txt
+🧑‍💻 Author
+Joel David
+GitHub: @Daveside9
 
-License
-
+📄 License
 This project is licensed under the MIT License.
-
-Author
-
-joel david
-
-GitHub: https://github.com/Daveside9
 
